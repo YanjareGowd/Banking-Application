@@ -1,6 +1,12 @@
 package org.training.user.service;
 
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-public class UserServiceApplicationTest {
+@SpringBootTest
+class UserSerivceApplicationTest {
 
+	@Test
+	void contextLoads() {
+	}
 }
