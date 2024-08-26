@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService {
     private final AccountService accountService;
 
     private UserMapper userMapper = new UserMapper();
+    
 
     @Value("${spring.application.success}")
     private String responseCodeSuccess;
