@@ -10,7 +10,7 @@ spring:
     not_found: 404
 
   datasource:
-    url: jdbc:mysql://localhost:3306/ms_user?useSSL=false
+    url: jdbc:mysql://localhost:3306/ms_user?allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: Yg@36368
   jpa:
