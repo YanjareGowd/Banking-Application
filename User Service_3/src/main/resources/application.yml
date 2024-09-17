@@ -21,7 +21,23 @@ spring:
       hibernate:
         format_sql: true
 
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: user-service-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: "*"
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
+# Uncomment the following if Keycloak is needed
 #app:
 #  config:
 #    keycloak:
@@ -29,4 +45,3 @@ spring:
 #      realm: banking-service
 #      client-id: banking-service-api-client
 #      client-secret: 932OFITe8vtH4z0G9gem4Afd69JhbwrI
-
